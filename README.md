@@ -1,7 +1,22 @@
 # Welcome to Octobook
 
+# Installation
+```
+git clone git@github.com:clarkngo/octobook.git
+cd octobook
+npm install
+```
+# Build Commands
+```
+npm run build
+npm run watch # continously build
+npm run clean # start fresh
+```
+After running build or watch, open up index.html in a browser.
 # Terminology
+Model
 
+Provider
 
 # Tech Stack
 * [Node.js](https://nodejs.org) / [Express](https://expressjs.com) for our backend using JavaScript/TypeScript
