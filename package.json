@@ -1,0 +1,34 @@
+{
+  "name": "octobook",
+  "version": "1.0.0",
+  "description": "scheduling app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarkngo/octobook.git"
+  },
+  "author": "Clark Ngo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clarkngo/octobook/issues"
+  },
+  "homepage": "https://github.com/clarkngo/octobook#readme",
+  "dependencies": {
+    "@fullcalendar/core": "^4.1.0",
+    "@fullcalendar/interaction": "^4.1.0",
+    "@fullcalendar/daygrid": "^4.1.0",
+    "@fullcalendar/timegrid": "^4.1.0",
+    "@fullcalendar/list": "^4.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
