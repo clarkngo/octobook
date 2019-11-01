@@ -4187,11 +4187,11 @@ var DateComponent = /** @class */ (function (_super) {
     renderEventDragSegs(state: EventSegUiInteractionState) {
       if (state) {
         let { isEvent, segs, sourceSeg } = state
-  
+
         if (this.eventRenderer) {
           this.eventRenderer.hideByHash(state.affectedInstances)
         }
-  
+
         // if the user is dragging something that is considered an event with real event data,
         // and this component likes to do drag mirrors OR the component where the seg came from
         // likes to do drag mirrors, then render a drag mirror.
@@ -4200,7 +4200,7 @@ var DateComponent = /** @class */ (function (_super) {
             this.mirrorRenderer.renderSegs(segs, { isDragging: true, sourceSeg })
           }
         }
-  
+
         // if it would be impossible to render a drag mirror OR this component likes to render
         // highlights, then render a highlight.
         if (!isEvent || this.doesDragHighlight) {
@@ -4647,7 +4647,7 @@ function expandRanges(daysOfWeek, startTime, framingRange, dateEnv) {
     var endMarker = framingRange.end;
     var instanceStarts = [];
     while (dayMarker < endMarker) {
-        var instanceStart 
+        var instanceStart
         // if everyday, or this particular day-of-week
         = void 0;
         // if everyday, or this particular day-of-week
@@ -9384,14 +9384,14 @@ var DayGridFillRenderer = /** @class */ (function (_super) {
             '</div>');
         trEl = skeletonEl.getElementsByTagName('tr')[0];
         if (startCol > 0) {
-            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(trEl, 
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(trEl,
             // will create (startCol + 1) td's
             new Array(startCol + 1).join(EMPTY_CELL_HTML));
         }
         seg.el.colSpan = endCol - startCol;
         trEl.appendChild(seg.el);
         if (endCol < colCnt) {
-            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(trEl, 
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(trEl,
             // will create (colCnt - endCol) td's
             new Array(colCnt - endCol + 1).join(EMPTY_CELL_HTML));
         }
@@ -14410,7 +14410,10 @@ document.addEventListener('DOMContentLoaded', function() {
         url: 'http://google.com/',
         start: '2018-01-28'
       }
-    ]
+    ],
+    dateClick: function() {
+        alert('a day has been clicked!')
+    }
   });
 
   calendar.render();
