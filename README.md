@@ -26,7 +26,7 @@ Provider
 <details>
 <summary>Expand to view a diagram illustrating the proposed schema for Octobook.</summary>
 <br>
-
+</details>
 ## User stories so far
 
 Our goal is to keep things simple and not reinvent wheels. So far we have only two user roles: participants and chapter organizers, both of which are users.
