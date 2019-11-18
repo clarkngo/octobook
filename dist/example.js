@@ -14359,9 +14359,14 @@
           {
             title: 'Model: Clark',
             start: '2019-11-01',
+            extendedProps: {
+                age: 29
+              },
+              condition: 'hypertension'
           },
           {
             title: 'Model: Jason',
+            age: '29',
             start: '2019-11-07',
             end: '2019-11-10'
           },
@@ -14411,9 +14416,19 @@
             start: '2019-11-28'
           }
         ],
-        dateClick: function() {
-            alert('a day has been clicked!')
-        }
+        eventClick: function(info) {
+            // update innerhtml in modal
+            document.getElementById("modal-title").innerHTML = info.event.title;
+
+            document.getElementById("modal-body").innerHTML =
+            'Age: ' + info.event.extendedProps['age'] +
+            '<br/>' +
+            'Condition: '  + info.event.extendedProps['condition'];
+            // show modal
+            $('#modal').modal();
+            // change the border color just for fun
+            info.el.style.borderColor = 'red';
+          }
       });
 
       calendar.render();
